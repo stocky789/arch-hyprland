@@ -1,5 +1,5 @@
 #!/bin/bash
-# 💫 https://github.com/JaKooLit 💫 #
+
 # SDDM themes #
 
 source_theme="https://codeberg.org/JaKooLit/sddm-sequoia"

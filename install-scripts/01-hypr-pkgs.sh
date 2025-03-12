@@ -1,5 +1,4 @@
 #!/bin/bash
-# 💫 https://github.com/JaKooLit 💫 #
 # Hyprland Packages #
 
 # edit your packages desired here. 

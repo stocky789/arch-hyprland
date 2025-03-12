@@ -1,5 +1,4 @@
 #!/bin/bash
-# https://github.com/JaKooLit
 
 clear
 
@@ -66,16 +65,14 @@ fi
 clear
 
 printf "\n%.0s" {1..2}  
-echo -e "\e[35m
-	╦╔═┌─┐┌─┐╦    ╦ ╦┬ ┬┌─┐┬─┐┬  ┌─┐┌┐┌┌┬┐
-	╠╩╗│ ││ │║    ╠═╣└┬┘├─┘├┬┘│  ├─┤│││ ││ 2025
-	╩ ╩└─┘└─┘╩═╝  ╩ ╩ ┴ ┴  ┴└─┴─┘┴ ┴┘└┘─┴┘ Arch Linux
+echo -e "\e[34m
+Stockys Hyprland Script (Based on JaKooLit arch-hyprland project https://github.com/JaKooLit/Arch-Hyprland)
 \e[0m"
 printf "\n%.0s" {1..1} 
 
 # Welcome message using whiptail (for displaying information)
-whiptail --title "KooL Arch-Hyprland (2025) Install Script" \
-    --msgbox "Welcome to KooL Arch-Hyprland (2025) Install Script!!!\n\n\
+whiptail --title "Stockys Install Script" \
+    --msgbox "Welcome to Stockys Arch-Hyprland (2025) Install Script\n\n\
 ATTENTION: Run a full system update and Reboot first !!! (Highly Recommended)\n\n\
 NOTE: If you are installing on a VM, ensure to enable 3D acceleration else Hyprland may NOT start!" \
     15 80
@@ -265,7 +262,6 @@ options_command+=(
     "ags" "Install AGS v1 for Desktop-Like Overview" "OFF"
     "xdph" "Install XDG-DESKTOP-PORTAL-HYPRLAND (for screen share)?" "OFF"
     "zsh" "Install zsh shell with Oh-My-Zsh?" "OFF"
-    "pokemon" "Add Pokemon color scripts to your terminal?" "OFF"
     "rog" "Are you installing on Asus ROG laptops?" "OFF"
     "dots" "Download and install pre-configured KooL Hyprland dotfiles?" "OFF"
 )
@@ -428,10 +424,6 @@ for option in "${options[@]}"; do
         zsh)
             echo "${INFO} Installing ${SKY_BLUE}zsh with Oh-My-Zsh...${RESET}" | tee -a "$LOG"
             execute_script "zsh.sh"
-            ;;
-        pokemon)
-            echo "${INFO} Adding ${SKY_BLUE}Pokemon color scripts to terminal...${RESET}" | tee -a "$LOG"
-            execute_script "zsh_pokemon.sh"
             ;;
         rog)
             echo "${INFO} Installing ${SKY_BLUE}ROG laptop packages...${RESET}" | tee -a "$LOG"
