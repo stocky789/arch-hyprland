@@ -1,4 +1,3 @@
-<div align="center">
 
 ## ✨ to use this script
 - clone this repo (latest commit only) to reduce file size download by using git. Change directory, make executable and run the script
