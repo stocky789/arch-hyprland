@@ -17,20 +17,20 @@ if ! source "$(dirname "$(readlink -f "$0")")/Global_functions.sh"; then
 fi
 
 # Check if Hyprland-Dots exists
-printf "${NOTE} Cloning and Installing ${SKY_BLUE}KooL's Hyprland Dots${RESET}....\n"
+printf "${NOTE} Cloning and Installing ${SKY_BLUE}Stockys Hyprland Dots${RESET}....\n"
 
 if [ -d Hyprland-Dots ]; then
-  cd Hyprland-Dots
+  cd hyprland-dots
   git stash && git pull
   chmod +x copy.sh
   ./copy.sh 
 else
-  if git clone --depth=1 https://github.com/JaKooLit/Hyprland-Dots; then
-    cd Hyprland-Dots || exit 1
+  if git clone --depth=1 https://github.com/stocky789/hyprland-dots; then
+    cd hyprland-dots || exit 1
     chmod +x copy.sh
     ./copy.sh 
   else
-    echo -e "$ERROR Can't download ${YELLOW}KooL's Hyprland-Dots${RESET} . Check your internet connection"
+    echo -e "$ERROR Can't download ${YELLOW}Stockys hyprland-dots${RESET} . Check your internet connection"
   fi
 fi
 
